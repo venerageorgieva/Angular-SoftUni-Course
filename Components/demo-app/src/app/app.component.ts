@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterOutlet,
     NavigationBarComponent,
     FooterComponent,
+    UserListComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
