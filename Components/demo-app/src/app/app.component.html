@@ -1,5 +1,14 @@
 <app-navigation-bar />
 <h1>Hello , Components!</h1>
 <app-user-list />
+<div id="numbers-wrapper">
+  @for (n of numbers; track $index) {
+     @if (n % 2===0) {
+  <div class="num blue">{{ n }}</div>
+  } @else {
+    <div class="num red">{{ n }}</div>
+}
+  }
+</div>
 
 <app-footer />
