@@ -28,7 +28,7 @@
 //   removeMoney() {}
 // }
 
-// // BAD PRACTICE
+// BAD PRACTICE
 // class UserWithWalletAndCar {
 //   firstName: string;
 //   lastName: string;
