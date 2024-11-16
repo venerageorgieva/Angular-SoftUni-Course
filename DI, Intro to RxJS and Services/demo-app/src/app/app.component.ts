@@ -13,13 +13,19 @@ import { UserService } from './user-list/user.service';
 })
 export class AppComponent {
   title = 'demo-app';
-  
-  constructor (public userService: UserService) {
 
+  users: SimpleUser[] = [];
+
+  constructor(private userService: UserService) {
+    this.users = this.userService.appUsers;
   }
 
   handleClick() {
     this.title = 'ZDR!';
   }
 
+  addSimpleUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
+    //Validate input
+    this.userService.addUser(inputName, inputAge);
+  }
 }
