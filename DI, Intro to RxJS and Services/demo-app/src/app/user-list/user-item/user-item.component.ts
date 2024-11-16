@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SimpleUser } from '../../types';
 import { UserService } from '../user.service';
 @Component({
@@ -10,6 +10,12 @@ import { UserService } from '../user.service';
 })
 export class UserItemComponent {
   @Input('user') user: SimpleUser | null = null;
-  
+
   constructor(private us: UserService) {}
+
+  ngOnInit(): void {
+    // console.log(
+    //   this.user?.name + ' - ' + JSON.stringify(this.us.appUsers, null, 4)
+    // );
+  }
 }
